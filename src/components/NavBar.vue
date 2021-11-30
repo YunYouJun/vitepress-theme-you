@@ -4,6 +4,8 @@ import NavBarTitle from './NavBarTitle.vue'
 import NavLinks from './NavLinks.vue'
 import ToggleSideBarButton from './ToggleSideBarButton.vue'
 
+import DarkModeSwitch from './navbar/DarkModeSwitch.vue'
+
 const repo = useRepo()
 
 defineEmits(['toggle'])
