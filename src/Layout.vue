@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, watch, defineAsyncComponent } from 'vue'
 import { useRoute, useData } from 'vitepress'
+import Debug from 'vitepress/dist/client/app/components/Debug.vue'
 import { isSideBarEmpty, getSideBarConfig } from './support/sideBar'
 
 // components

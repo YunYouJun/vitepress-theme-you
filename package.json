@@ -1,6 +1,6 @@
 {
   "name": "vitepress-theme-you",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "🎮 你的新文档主题",
   "main": "src/index.ts",
   "exports": {
