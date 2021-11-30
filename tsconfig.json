@@ -19,6 +19,6 @@
       "vitepress-theme-you": ["src/index.ts"],
     }
   },
-  "include": ["src/**/*", "docs/.vitepress/**/*"],
+  "include": ["src/**/*", "docs/.vitepress/**/*", "node_modules/@vueuse/core/index.d.ts"],
   "exclude": ["dist", "node_modules"]
 }

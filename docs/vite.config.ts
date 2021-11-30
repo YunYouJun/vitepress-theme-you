@@ -5,8 +5,6 @@ import Unocss from 'unocss/vite'
 import { presetUno, presetAttributify } from 'unocss'
 import presetIcons from '@unocss/preset-icons'
 
-import AutoImport from 'unplugin-auto-import/vite'
-
 const config: UserConfig = {
   resolve: {
     alias: {
@@ -26,12 +24,6 @@ const config: UserConfig = {
           /* options */
         }),
       ],
-    }),
-
-    // https://github.com/antfu/unplugin-auto-import
-    AutoImport({
-      imports: ['vue', '@vueuse/core'],
-      dts: 'src/auto-imports.d.ts',
     }),
   ],
 }
