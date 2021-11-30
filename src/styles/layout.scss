@@ -163,24 +163,31 @@ li > ol {
 }
 
 table {
-  display: block;
+  display: table;
+  width: 100%;
   border-collapse: collapse;
   margin: 1rem 0;
   overflow-x: auto;
+
+  text-align: left;
 }
 
 tr {
-  border-top: 1px solid #dfe2e5;
+  border: 1px solid var(--c-divider);
 }
 
 tr:nth-child(2n) {
-  background-color: #f6f8fa;
+  background-color: rgba(0,0,0,0.01);
 }
 
-th,
-td {
-  border: 1px solid #dfe2e5;
+th,td {
   padding: 0.6em 1em;
+  border: 1px solid var(--c-divider);
+  border-width: 1px 0;
+}
+
+th {
+  background-color: rgba(0,0,0,0.04);
 }
 
 blockquote {
@@ -197,6 +204,28 @@ blockquote > p {
 
 form {
   margin: 0;
+}
+
+/* scrollbar */
+* {
+  scrollbar-color: var(--c-divider-light) var(--c-bg);
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--c-bg);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--c-divider-light);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-divider-dark);
 }
 
 .theme.sidebar-open .sidebar-mask {

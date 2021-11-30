@@ -9,8 +9,8 @@ startLink: /guide/
 actionText: GitHub
 actionLink: https://github.com/YunYouJun/advjs
 
-altActionText: DEMO
-altActionLink: https://demo.advjs.org
+altActionText: Guide
+altActionLink: /guide/
 
 features:
   - title: ✍️ 优雅

@@ -3,7 +3,6 @@
   "devDependencies": {
     "@unocss/preset-icons": "^0.12.15",
     "unocss": "^0.12.15",
-    "unplugin-auto-import": "^0.5.1",
-    "unplugin-vue-components": "^0.17.2"
+    "unplugin-auto-import": "^0.5.1"
   }
 }

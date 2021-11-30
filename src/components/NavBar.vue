@@ -23,7 +23,7 @@ defineEmits(['toggle'])
       <NavLinks />
     </div>
 
-    <div class="nav-icons flex items-center" m="l-2">
+    <div class="nav-icons flex items-center gap-2" m="l-4">
       <a v-if="repo" class="icon-button" :href="repo.link" target="_blank" aria-label="View GitHub Repo">
         <div class="i-ri-github-line" />
       </a>
