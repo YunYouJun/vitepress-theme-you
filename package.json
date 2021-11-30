@@ -1,0 +1,45 @@
+{
+  "name": "vitepress-theme-you",
+  "version": "0.0.1",
+  "description": "🎮 你的新文档主题",
+  "main": "index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "pnpm docs:build",
+    "dev": "pnpm docs:dev",
+    "docs:dev": "vitepress dev docs --host",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "lint": "eslint \"**/*.{vue,ts,js}\"",
+    "lint:fix": "eslint \"**/*.{vue,ts,js}\" --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YunYouJun/vitepress-theme-you.git"
+  },
+  "author": {
+    "name": "YunYouJun",
+    "email": "me@yunyoujun.cn",
+    "url": "https://www.yunyoujun.cn"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YunYouJun/vitepress-theme-you/issues"
+  },
+  "homepage": "https://github.com/YunYouJun/vitepress-theme-you#readme",
+  "devDependencies": {
+    "@antfu/eslint-config": "0.10",
+    "@iconify-json/ri": "^1.0.1",
+    "@types/node": "^16.11.11",
+    "@vueuse/core": "^7.1.2",
+    "eslint": "^8.3.0",
+    "sass": "^1.44.0",
+    "typescript": "^4.5.2",
+    "vitepress": "^0.20.1"
+  },
+  "dependencies": {
+    "prism-theme-vars": "^0.2.2"
+  }
+}
