@@ -1,6 +1,3 @@
-// https://github.com/antfu/unocss
-import 'uno.css'
-
 import './styles/vars.scss'
 import './styles/index.scss'
 
