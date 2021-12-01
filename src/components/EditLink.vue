@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useEditLink } from '../composables/editLink'
-import OutboundLink from './icons/OutboundLink.vue'
 
 const { url, text } = useEditLink()
 </script>
@@ -9,30 +8,25 @@ const { url, text } = useEditLink()
   <div class="edit-link">
     <a
       v-if="url"
-      class="link"
+      class="link inline-flex justify-center items-center text-xs"
       :href="url"
       target="_blank"
       rel="noopener noreferrer"
     >
-      {{ text }} <OutboundLink class="icon" />
+      <div class="i-ri-thumb-up-line"></div>
+      <span class="ml-1">{{ text }}</span>
     </a>
   </div>
 </template>
 
 <style scoped>
 .link {
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 500;
+  display: inline-flex;
   color: var(--c-text-light);
 }
 
 .link:hover {
   text-decoration: none;
   color: var(--c-brand);
-}
-
-.icon {
-  margin-left: 4px;
 }
 </style>

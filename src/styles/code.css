@@ -58,7 +58,7 @@ html.dark {
   --prism-line-number-gutter: #eeeeee;
   --prism-line-highlight-background: #444444;
   --prism-selection-background: #444444;
-  --prism-inline-background: theme('colors.dark.300');
+  --prism-inline-background: #2d2d2d;
 }
 
 

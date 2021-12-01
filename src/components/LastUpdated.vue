@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { useData } from 'vitepress'
+import dayjs from 'dayjs'
 
 const { theme, page } = useData()
 
@@ -19,40 +20,30 @@ const datetime = ref('')
 onMounted(() => {
   // locale string might be different based on end user
   // and will lead to potential hydration mismatch if calculated at build time
-  datetime.value = new Date(page.value.lastUpdated).toLocaleString('en-US')
+  datetime.value = dayjs(page.value.lastUpdated).format('YYYY-MM-DD HH:mm:ss')
 })
 </script>
 
 <template>
-  <p v-if="hasLastUpdated" class="last-updated">
-    <span class="prefix">{{ prefix }}:</span>
-    <span class="datetime">{{ datetime }}</span>
+  <p v-if="hasLastUpdated" class="last-updated justify-center items-center">
+    <span class="prefix" title="prefix">
+      <div class="i-ri-edit-line"></div>
+    </span>
+    <span class="datetime ml-1">{{ datetime }}</span>
   </p>
 </template>
 
 <style scoped>
 .last-updated {
-  display: inline-block;
+  display: inline-flex;
   margin: 0;
   line-height: 1.4;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--c-text-light);
 }
 
-@media (min-width: 960px) {
-  .last-updated {
-    font-size: 1rem;
-  }
-}
-
-.prefix {
-  display: inline-block;
-  font-weight: 500;
-}
-
 .datetime {
-  display: inline-block;
-  margin-left: 6px;
+  display: inline-flex;
   font-weight: 400;
 }
 </style>

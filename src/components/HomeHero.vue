@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useData, withBase } from 'vitepress'
-import NavLink from './NavLink.vue'
+import PressButton from './PressButton.vue'
 
 const { site, frontmatter } = useData()
 
@@ -19,7 +19,7 @@ const tagline = computed(
 
 <template>
   <header v-if="showHero" class="home-hero">
-    <figure v-if="frontmatter.heroImage" class="figure">
+    <figure v-if="frontmatter.heroImage" class="figure mx-5">
       <img
         class="image"
         :src="withBase(frontmatter.heroImage)"
@@ -36,13 +36,13 @@ const tagline = computed(
       {{ tagline }}
     </p>
 
-    <NavLink
+    <PressButton
       v-if="frontmatter.actionLink && frontmatter.actionText"
+      class="mt-8"
       :item="{ link: frontmatter.actionLink, text: frontmatter.actionText }"
-      class="action"
     />
 
-    <NavLink
+    <PressButton
       v-if="frontmatter.altActionLink && frontmatter.altActionText"
       :item="{
         link: frontmatter.altActionLink,
@@ -68,12 +68,8 @@ const tagline = computed(
 
 @media (min-width: 720px) {
   .home-hero {
-    margin: 4rem 0 4.25rem;
+    margin: 4rem 0 3rem;
   }
-}
-
-.figure {
-  padding: 0 1.5rem;
 }
 
 .image {
@@ -116,11 +112,6 @@ const tagline = computed(
   }
 }
 
-.action {
-  margin-top: 1.5rem;
-  display: inline-block;
-}
-
 .action.alt {
   margin-left: 1.5rem;
 }
@@ -132,28 +123,9 @@ const tagline = computed(
   }
 }
 
-.action :deep(.item) {
-  display: inline-block;
-  border-radius: 6px;
-  padding: 0 20px;
-  line-height: 44px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--c-bg);
-  background-color: var(--c-brand);
-  border: 2px solid var(--c-brand);
-  transition: background-color 0.1s ease;
-}
-
 .action.alt :deep(.item) {
   background-color: var(--c-bg);
   color: var(--c-brand);
-}
-
-.action :deep(.item:hover) {
-  text-decoration: none;
-  color: var(--c-bg);
-  background-color: var(--c-brand-light);
 }
 
 @media (min-width: 420px) {

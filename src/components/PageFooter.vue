@@ -17,25 +17,12 @@ import LastUpdated from './LastUpdated.vue'
 <style scoped>
 .page-footer {
   padding-top: 1rem;
-  padding-bottom: 1rem;
   overflow: auto;
 }
 
-@media (min-width: 960px) {
-  .page-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.updated {
-  padding-top: 4px;
-}
-
-@media (min-width: 960px) {
-  .updated {
-    padding-top: 0;
-  }
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 </style>

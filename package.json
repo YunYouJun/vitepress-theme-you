@@ -44,6 +44,7 @@
     "vitepress": "^0.20.1"
   },
   "dependencies": {
+    "dayjs": "^1.10.7",
     "prism-theme-vars": "^0.2.2"
   }
 }
