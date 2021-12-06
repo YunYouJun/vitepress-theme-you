@@ -13,8 +13,8 @@ const config: UserConfig = {
     docsRepo: "YunYouJun/advjs",
 
     editLinks: true,
-    editLinkText: "✍️ 帮助改善此页面",
-    lastUpdated: "🕙 上次更新",
+    editLinkText: "帮助改善此页面",
+    lastUpdated: "上次更新",
 
     nav: [
       {

@@ -36,20 +36,21 @@ const tagline = computed(
       {{ tagline }}
     </p>
 
-    <PressButton
-      v-if="frontmatter.actionLink && frontmatter.actionText"
-      class="mt-8"
-      :item="{ link: frontmatter.actionLink, text: frontmatter.actionText }"
-    />
+    <div class="mt-8 flex justify-center">
+      <PressButton
+        v-if="frontmatter.actionLink && frontmatter.actionText"
+        :item="{ link: frontmatter.actionLink, text: frontmatter.actionText }"
+      />
 
-    <PressButton
-      v-if="frontmatter.altActionLink && frontmatter.altActionText"
-      :item="{
-        link: frontmatter.altActionLink,
-        text: frontmatter.altActionText
-      }"
-      class="action alt"
-    />
+      <PressButton
+        v-if="frontmatter.altActionLink && frontmatter.altActionText"
+        :item="{
+          link: frontmatter.altActionLink,
+          text: frontmatter.altActionText
+        }"
+        class="ml-4"
+      />
+    </div>
   </header>
 </template>
 
@@ -110,22 +111,6 @@ const tagline = computed(
     line-height: 1.2;
     font-size: 1.6rem;
   }
-}
-
-.action.alt {
-  margin-left: 1.5rem;
-}
-
-@media (min-width: 420px) {
-  .action {
-    margin-top: 2rem;
-    display: inline-block;
-  }
-}
-
-.action.alt :deep(.item) {
-  background-color: var(--c-bg);
-  color: var(--c-brand);
 }
 
 @media (min-width: 420px) {

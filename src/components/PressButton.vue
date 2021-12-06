@@ -12,7 +12,7 @@ const { props: linkProps } = useNavLink(propsRefs.item)
 </script>
 
 <template>
-  <div>
+  <span>
     <a
       class="
       press-button
@@ -23,7 +23,7 @@ const { props: linkProps } = useNavLink(propsRefs.item)
     >
       {{ item.text }}
     </a>
-  </div>
+  </span>
 </template>
 
 <style lang="scss">

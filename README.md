@@ -1,6 +1,8 @@
 # vitepress-theme-you
 
-> 🎮 你的文档主题（开发中）
+> 🎮 你的下一个文档主题（开发中）
+
+[![npm](https://img.shields.io/npm/v/vitepress-theme-you)](https://npmjs.com/package/vitepress-theme-you)
 
 ## Usage
 
