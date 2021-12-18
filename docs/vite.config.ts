@@ -1,31 +1,15 @@
 import { resolve } from 'path'
-import { UserConfig } from 'vite'
+import type { UserConfig } from 'vite'
 
-import Unocss from 'unocss/vite'
-import { presetUno, presetAttributify } from 'unocss'
-import presetIcons from '@unocss/preset-icons'
+import { defaultConfig } from '../config'
 
-const config: UserConfig = {
+const config: UserConfig = Object.assign(defaultConfig, {
   resolve: {
     alias: {
       'vitepress-theme-you/': `${resolve(__dirname, '../src')}/`,
       'vitepress-theme-you': resolve(__dirname, '../src/index.ts'),
     },
   },
-
-  plugins: [
-    Unocss({
-      presets: [
-        presetAttributify({
-          /* preset options */
-        }),
-        presetUno(),
-        presetIcons({
-          /* options */
-        }),
-      ],
-    }),
-  ],
-}
+})
 
 export default config

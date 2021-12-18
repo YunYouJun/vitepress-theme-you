@@ -6,7 +6,7 @@ import 'uno.css'
 
 const theme: Theme = {
   ...YouTheme,
-  enhanceApp: ({ app }) => {},
+  // enhanceApp: ({ app }) => {},
 };
 
 export default theme;

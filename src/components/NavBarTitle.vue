@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { withBase, useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 const { site, theme, localePath } = useData()
 
 </script>
@@ -21,7 +21,7 @@ const { site, theme, localePath } = useData()
       class="logo"
       :src="withBase(theme.logo)"
       alt="Logo"
-    />
+    >
     {{ site.title }}
   </a>
 </template>

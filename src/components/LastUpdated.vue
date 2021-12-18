@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useData } from 'vitepress'
 import dayjs from 'dayjs'
 
@@ -26,8 +26,8 @@ onMounted(() => {
 
 <template>
   <p v-if="hasLastUpdated" class="last-updated justify-center items-center">
-    <span class="prefix" title="prefix">
-      <div class="i-ri-edit-line"></div>
+    <span class="prefix" :title="prefix">
+      <div class="i-ri-edit-line" />
     </span>
     <span class="datetime ml-1">{{ datetime }}</span>
   </p>

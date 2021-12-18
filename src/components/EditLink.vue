@@ -13,7 +13,7 @@ const { url, text } = useEditLink()
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div class="i-ri-thumb-up-line"></div>
+      <div class="i-ri-thumb-up-line" />
       <span class="ml-1">{{ text }}</span>
     </a>
   </div>

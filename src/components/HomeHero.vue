@@ -24,10 +24,10 @@ const tagline = computed(
         class="image"
         :src="withBase(frontmatter.heroImage)"
         :alt="frontmatter.heroAlt"
-      />
+      >
     </figure>
 
-    <i class="inline-flex w-50 h-50" :class="frontmatter.heroIconClass"></i>
+    <i class="inline-flex w-50 h-50" :class="frontmatter.heroIconClass" />
 
     <h1 v-if="heroText" id="main-title" class="title">
       {{ heroText }}

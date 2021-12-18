@@ -12,6 +12,18 @@ pnpm i vitepress
 
 More info see [vitepress](https://github.com/vuejs/vitepress). Base on [theme-default | vitepress](https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/).
 
+Config `vite.config.ts`:
+
+```ts
+
+```
+
+Config `.vitepress/theme/index.ts`:
+
+```ts
+
+```
+
 ## Who use it?
 
 - [advjs](https://github.com/YunYouJun/advjs/)

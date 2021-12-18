@@ -1,8 +1,9 @@
-import { FunctionalComponent, h, VNode } from 'vue'
-import { useRoute, useData } from 'vitepress'
-import { Header } from '../../shared'
-import { DefaultTheme } from '../config'
-import { joinUrl, isActive } from '../utils'
+import type { FunctionalComponent, VNode } from 'vue'
+import { h } from 'vue'
+import { useData, useRoute } from 'vitepress'
+import type { Header } from '../../shared'
+import type { DefaultTheme } from '../config'
+import { isActive, joinUrl } from '../utils'
 
 interface HeaderWithChildren extends Header {
   children?: Header[]

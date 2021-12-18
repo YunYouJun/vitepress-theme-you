@@ -10,14 +10,14 @@ const { hasLinks, prev, next } = useNextAndPrevLinks()
     <div class="container">
       <div class="prev">
         <a v-if="prev" class="link" :href="withBase(prev.link)">
-          <div class="i-ri-arrow-left-line mr-1"></div>
+          <div class="i-ri-arrow-left-line mr-1" />
           <span class="text">{{ prev.text }}</span>
         </a>
       </div>
       <div class="next">
         <a v-if="next" class="link" :href="withBase(next.link)">
           <span class="text">{{ next.text }}</span>
-          <div class="i-ri-arrow-right-line ml-1"></div>
+          <div class="i-ri-arrow-right-line ml-1" />
         </a>
       </div>
     </div>
