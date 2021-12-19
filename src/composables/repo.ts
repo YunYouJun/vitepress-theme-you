@@ -1,6 +1,6 @@
 import { computed } from 'vue'
 import { useData } from 'vitepress'
-import type { YouTheme } from '../config'
+import type { YouTheme } from '../types/config'
 import { EXTERNAL_URL_RE } from '../shared'
 
 export const platforms = ['GitHub', 'GitLab', 'Bitbucket'].map((platform) => {

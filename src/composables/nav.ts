@@ -1,6 +1,6 @@
 import { computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
-import type { YouTheme } from '../config'
+import type { YouTheme } from '../types/config'
 
 export function useLanguageLinks() {
   const { site, localePath, theme } = useData()

@@ -1,11 +1,10 @@
 {
   "name": "vitepress-theme-you",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "description": "🎮 你的新文档主题",
   "main": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts",
-    "./config": "./config/index.ts",
     "./*": "./src/*"
   },
   "files": [

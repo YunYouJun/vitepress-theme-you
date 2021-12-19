@@ -3,7 +3,7 @@ import { useData, useRoute } from 'vitepress'
 import type { Header } from 'vitepress'
 import { useActiveSidebarLinks } from '../composables/activeSidebarLink'
 import { getSideBarConfig } from '../support/sideBar'
-import type { YouTheme } from '../config'
+import type { YouTheme } from '../types/config'
 
 export function useSideBar() {
   const route = useRoute()

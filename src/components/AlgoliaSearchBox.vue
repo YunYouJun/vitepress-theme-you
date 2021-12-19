@@ -4,7 +4,7 @@ import docsearch from '@docsearch/js'
 import { useData, useRoute, useRouter } from 'vitepress'
 import { getCurrentInstance, onMounted, watch } from 'vue'
 import type { DocSearchHit } from '@docsearch/react/dist/esm/types'
-import type { YouTheme } from '../config'
+import type { YouTheme } from '../types/config'
 
 const props = defineProps<{
   options: YouTheme.AlgoliaSearchOptions

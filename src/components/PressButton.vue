@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { toRefs } from 'vue'
 import { useNavLink } from '../composables/navLink'
-import type { YouTheme } from '../config'
+import type { YouTheme } from '../types/config'
 
 const props = defineProps<{
   item: YouTheme.NavItemWithLink

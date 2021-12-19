@@ -11,11 +11,14 @@ import type { Theme } from 'vitepress'
 import Layout from './Layout.vue'
 import NotFound from './NotFound.vue'
 
-export type { YouTheme } from './config'
+export type { YouTheme } from './types/config'
 
-const theme: Theme = {
+export const theme: Theme = {
   Layout,
   NotFound,
 }
+
+// export
+export * from './types/config'
 
 export default theme

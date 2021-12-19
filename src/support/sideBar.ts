@@ -1,4 +1,4 @@
-import type { YouTheme } from '../config'
+import type { YouTheme } from '../types/config'
 import { ensureStartingSlash, isArray, removeExtention } from '../utils'
 
 export function isSideBarConfig(

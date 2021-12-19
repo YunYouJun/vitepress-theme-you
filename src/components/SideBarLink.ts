@@ -2,7 +2,7 @@ import type { FunctionalComponent, VNode } from 'vue'
 import { h } from 'vue'
 import { useData, useRoute } from 'vitepress'
 import type { Header } from 'vitepress'
-import type { YouTheme } from '../config'
+import type { YouTheme } from '../types/config'
 import { isActive, joinUrl } from '../utils/'
 
 interface HeaderWithChildren extends Header {

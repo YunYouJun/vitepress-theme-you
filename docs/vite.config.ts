@@ -1,7 +1,7 @@
 import { resolve } from 'path'
 import type { UserConfig } from 'vite'
 
-import { defaultConfig } from '../config'
+import { defaultConfig } from '../src/config'
 
 const config: UserConfig = Object.assign(defaultConfig, {
   resolve: {
