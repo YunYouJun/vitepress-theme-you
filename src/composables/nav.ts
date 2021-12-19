@@ -1,6 +1,6 @@
 import { computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
-import type { DefaultTheme } from '../config'
+import type { YouTheme } from '../config'
 
 export function useLanguageLinks() {
   const { site, localePath, theme } = useData()
@@ -28,6 +28,6 @@ export function useLanguageLinks() {
     return {
       text: selectText,
       items: candidates,
-    } as DefaultTheme.NavItemWithChildren
+    } as YouTheme.NavItemWithChildren
   })
 }

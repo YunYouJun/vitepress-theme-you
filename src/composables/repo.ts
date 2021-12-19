@@ -1,6 +1,6 @@
 import { computed } from 'vue'
 import { useData } from 'vitepress'
-import type { DefaultTheme } from '../config'
+import type { YouTheme } from '../config'
 import { EXTERNAL_URL_RE } from '../shared'
 
 export const platforms = ['GitHub', 'GitLab', 'Bitbucket'].map((platform) => {
@@ -11,7 +11,7 @@ export function useRepo() {
   const { site } = useData()
 
   return computed(() => {
-    const theme = site.value.themeConfig as DefaultTheme.Config
+    const theme = site.value.themeConfig as YouTheme.Config
     const name = theme.docsRepo || theme.repo
 
     if (!name)

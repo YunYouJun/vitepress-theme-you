@@ -6,9 +6,9 @@ import PressButton from './PressButton.vue'
 const { site, frontmatter } = useData()
 
 const showHero = computed(() => {
-  const { heroImage, heroText, tagline, actionLink, actionText }
+  const { heroImage, heroText, tagline, actions }
     = frontmatter.value
-  return heroImage || heroText || tagline || (actionLink && actionText)
+  return heroImage || heroText || tagline || actions.length
 })
 
 const heroText = computed(() => frontmatter.value.heroText || site.value.title)
@@ -27,7 +27,7 @@ const tagline = computed(
       >
     </figure>
 
-    <i class="inline-flex w-50 h-50" :class="frontmatter.heroIconClass" />
+    <i v-else class="inline-flex w-50 h-50" :class="frontmatter.heroIconClass" />
 
     <h1 v-if="heroText" id="main-title" class="title">
       {{ heroText }}
@@ -38,17 +38,9 @@ const tagline = computed(
 
     <div class="mt-8 flex justify-center">
       <PressButton
-        v-if="frontmatter.actionLink && frontmatter.actionText"
-        :item="{ link: frontmatter.actionLink, text: frontmatter.actionText }"
-      />
-
-      <PressButton
-        v-if="frontmatter.altActionLink && frontmatter.altActionText"
-        :item="{
-          link: frontmatter.altActionLink,
-          text: frontmatter.altActionText
-        }"
-        class="ml-4"
+        v-for="(action, index) in frontmatter.actions"
+        :key="index"
+        :item="action"
       />
     </div>
   </header>
@@ -99,8 +91,7 @@ const tagline = computed(
 }
 
 .tagline {
-  margin: 0;
-  margin-top: 0.25rem;
+  margin-top: 1rem;
   line-height: 1.3;
   font-size: 1.2rem;
   color: var(--c-text-light);

@@ -8,20 +8,24 @@
   overflow-x: auto;
 }
 
+:root {
+  --you-block-bg-color: rgba(243, 245, 247, 0.1);
+}
+
 .custom-block.tip {
-  background-color: #f3f5f7;
+  background-color: var(--you-block-bg-color);
   border-color: var(--c-brand);
 }
 
 .custom-block.info {
-  background-color: #f3f5f7;
+  background-color: var(--you-block-bg-color);
   border-color: var(--c-text-light-2);
 }
 
 .custom-block.warning {
   border-color: #e7c000;
-  color: #6b5900;
-  background-color: rgba(255, 229, 100, 0.3);
+  color: #b29400;
+  background-color: rgba(255, 229, 100, 0.1);
 }
 
 .custom-block.warning .custom-block-title {
@@ -34,8 +38,8 @@
 
 .custom-block.danger {
   border-color: #c00;
-  color: #4d0000;
-  background-color: #ffe6e6;
+  color: #990000;
+  background-color: rgba(255, 230, 230, 0.9);
 }
 
 .custom-block.danger .custom-block-title {

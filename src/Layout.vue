@@ -8,6 +8,7 @@ import { getSideBarConfig, isSideBarEmpty } from './support/sideBar'
 import NavBar from './components/NavBar.vue'
 import Page from './components/Page.vue'
 import SideBar from './components/SideBar.vue'
+import { isDev } from './shared'
 
 const Home = defineAsyncComponent(() => import('./components/Home.vue'))
 
@@ -128,7 +129,7 @@ const pageClasses = computed(() => {
     </Page>
   </div>
 
-  <Debug />
+  <Debug v-if="isDev" />
 </template>
 
 <style>

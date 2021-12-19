@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import { useRepo } from 'vitepress-theme-you/composables/repo'
+import { useRepo } from '../composables/repo'
 
 const { frontmatter } = useData()
 const repo = useRepo()
@@ -52,19 +52,13 @@ const repo = useRepo()
 }
 
 .container {
-  padding: 2rem 1.5rem 2.25rem;
+  padding: 2rem 1.5rem;
 }
 
 .home-hero + .footer .container,
 .home-features + .footer .container,
 .home-content + .footer .container {
   border-top: 1px solid var(--c-divider);
-}
-
-@media (min-width: 420px) {
-  .container {
-    padding: 3rem 1.5rem 3.25rem;
-  }
 }
 
 .text {

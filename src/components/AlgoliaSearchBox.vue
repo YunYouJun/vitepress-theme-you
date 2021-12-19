@@ -4,10 +4,10 @@ import docsearch from '@docsearch/js'
 import { useData, useRoute, useRouter } from 'vitepress'
 import { getCurrentInstance, onMounted, watch } from 'vue'
 import type { DocSearchHit } from '@docsearch/react/dist/esm/types'
-import type { DefaultTheme } from '../config'
+import type { YouTheme } from '../config'
 
 const props = defineProps<{
-  options: DefaultTheme.AlgoliaSearchOptions
+  options: YouTheme.AlgoliaSearchOptions
   multilang?: boolean
 }>()
 
@@ -180,10 +180,28 @@ function initialize(userOptions: any) {
 
 .DocSearch {
   --docsearch-primary-color: var(--c-brand);
-  --docsearch-highlight-color: var(--docsearch-primary-color);
-  --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
-  --docsearch-text-color: var(--c-text-light);
-  --docsearch-muted-color: var(--c-text-lighter);
-  --docsearch-searchbox-background: #f2f2f2;
+  --docsearch-text-color: var(--c-text);
+  --docsearch-highlight-color: var(--c-brand);
+  --docsearch-muted-color: var(--c-text-quote);
+  --docsearch-container-background: rgba(9, 10, 17, 0.8);
+  --docsearch-modal-background: var(--c-bg-light);
+  --docsearch-searchbox-background: var(--c-bg-lighter);
+  --docsearch-searchbox-focus-background: var(--c-bg);
+  --docsearch-searchbox-shadow: inset 0 0 0 2px var(--c-brand);
+  --docsearch-hit-color: var(--c-text-light);
+  --docsearch-hit-active-color: var(--c-bg);
+  --docsearch-hit-background: var(--c-bg);
+  --docsearch-hit-shadow: 0 1px 3px 0 var(--c-border-dark);
+  --docsearch-footer-background: var(--c-bg);
+}
+
+.dark .DocSearch {
+  --docsearch-logo-color: var(--c-text);
+  --docsearch-modal-shadow: inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309;
+  --docsearch-key-shadow: inset 0 -2px 0 0 #282d55, inset 0 0 1px 1px #51577d,
+    0 2px 2px 0 rgba(3, 4, 9, 0.3);
+  --docsearch-key-gradient: linear-gradient(-225deg, #444950, #1c1e21);
+  --docsearch-footer-shadow: inset 0 1px 0 0 rgba(73, 76, 106, 0.5),
+    0 -4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 </style>

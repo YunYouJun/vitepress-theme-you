@@ -1,19 +1,19 @@
-import type { DefaultTheme } from '../config'
+import type { YouTheme } from '../config'
 import { ensureStartingSlash, isArray, removeExtention } from '../utils'
 
 export function isSideBarConfig(
-  sidebar: DefaultTheme.SideBarConfig | DefaultTheme.MultiSideBarConfig,
-): sidebar is DefaultTheme.SideBarConfig {
+  sidebar: YouTheme.SideBarConfig | YouTheme.MultiSideBarConfig,
+): sidebar is YouTheme.SideBarConfig {
   return sidebar === false || sidebar === 'auto' || isArray(sidebar)
 }
 
 export function isSideBarGroup(
-  item: DefaultTheme.SideBarItem,
-): item is DefaultTheme.SideBarGroup {
-  return (item as DefaultTheme.SideBarGroup).children !== undefined
+  item: YouTheme.SideBarItem,
+): item is YouTheme.SideBarGroup {
+  return (item as YouTheme.SideBarGroup).children !== undefined
 }
 
-export function isSideBarEmpty(sidebar?: DefaultTheme.SideBarConfig): boolean {
+export function isSideBarEmpty(sidebar?: YouTheme.SideBarConfig): boolean {
   return isArray(sidebar) ? sidebar.length === 0 : !sidebar
 }
 
@@ -24,9 +24,9 @@ export function isSideBarEmpty(sidebar?: DefaultTheme.SideBarConfig): boolean {
  * was found, it will return `auto` as a fallback.
  */
 export function getSideBarConfig(
-  sidebar: DefaultTheme.SideBarConfig | DefaultTheme.MultiSideBarConfig,
+  sidebar: YouTheme.SideBarConfig | YouTheme.MultiSideBarConfig,
   path: string,
-): DefaultTheme.SideBarConfig {
+): YouTheme.SideBarConfig {
   if (isSideBarConfig(sidebar))
     return sidebar
 
@@ -49,9 +49,9 @@ export function getSideBarConfig(
  * link contains it.
  */
 export function getFlatSideBarLinks(
-  sidebar: DefaultTheme.SideBarItem[],
-): DefaultTheme.SideBarLink[] {
-  return sidebar.reduce<DefaultTheme.SideBarLink[]>((links, item) => {
+  sidebar: YouTheme.SideBarItem[],
+): YouTheme.SideBarLink[] {
+  return sidebar.reduce<YouTheme.SideBarLink[]>((links, item) => {
     if (item.link)
       links.push({ text: item.text, link: removeExtention(item.link) })
 

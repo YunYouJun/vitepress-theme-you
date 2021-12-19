@@ -22,7 +22,12 @@ const { site, theme, localePath } = useData()
       :src="withBase(theme.logo)"
       alt="Logo"
     >
-    {{ site.title }}
+    <span class="lt-sm:hidden">
+      {{ site.title }}
+    </span>
+    <span v-if="theme.shortTitle" class="sm:hidden">
+      {{ theme.shortTitle }}
+    </span>
   </a>
 </template>
 
@@ -38,8 +43,9 @@ const { site, theme, localePath } = useData()
 }
 
 .logo {
-  margin-right: 0.75rem;
+  width: 1.3rem;
   height: 1.3rem;
+  margin-right: 0.75rem;
   vertical-align: bottom;
 }
 </style>

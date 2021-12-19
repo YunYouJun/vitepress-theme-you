@@ -76,6 +76,7 @@ pre, code {
   background: var(--prism-inline-background);
   padding: 1px 6px;
   border-radius: 3px;
+  color: var(--c-text);
 }
 
 a > code {

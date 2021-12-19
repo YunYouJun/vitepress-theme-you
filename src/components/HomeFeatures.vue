@@ -44,7 +44,6 @@ const features = computed<Feature[]>(() => {
 <style scoped>
 .home-features {
   margin: 0 auto;
-  padding: 2.5rem 0 2.75rem;
   max-width: 960px;
 }
 
@@ -53,10 +52,6 @@ const features = computed<Feature[]>(() => {
 }
 
 @media (min-width: 420px) {
-  .home-features {
-    padding: 3.25rem 0 3.5rem;
-  }
-
   .home-hero + .home-features {
     padding-top: 0;
   }

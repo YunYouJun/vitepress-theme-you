@@ -1,0 +1,22 @@
+html.dark {
+  --c-bg: #25272a;
+  --c-bg-semi: rgba(17, 17, 17, 0.8);
+  --c-bg-secondary: #222;
+
+  --c-bg-light: #2b313a;
+  --c-bg-lighter: #262c34;
+
+  --c-text: #f0f6fc;
+  --c-text-light: #f0f6fc;
+  --c-text-lighter: #ffffff;
+  --c-text-quote: #999999;
+
+  --c-divider-light: rgba(200, 200, 200, 0.12);
+  --c-divider-dark: rgba(200, 200, 200, 0.48);
+  --code-bg-color: #191919;
+  --code-inline-bg-color: rgba(255, 255, 255, 0.04);
+  --code-highlight: rgba(0, 0, 0, 0.66);
+
+  --c-disabled-bg: #333;
+  --c-disabled-fg: #aaa;
+}

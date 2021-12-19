@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useRepo } from 'vitepress-theme-you/composables/repo'
+import { useRepo } from '../composables/repo'
 import NavBarTitle from './NavBarTitle.vue'
 import NavLinks from './NavLinks.vue'
 import ToggleSideBarButton from './ToggleSideBarButton.vue'

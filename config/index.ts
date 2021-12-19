@@ -8,13 +8,9 @@ export const defaultConfig: UserConfig = {
   plugins: [
     Unocss({
       presets: [
-        presetAttributify({
-          /* preset options */
-        }),
+        presetAttributify(),
         presetUno(),
-        presetIcons({
-          /* options */
-        }),
+        presetIcons(),
       ],
     }),
   ],

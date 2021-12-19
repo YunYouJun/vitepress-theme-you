@@ -1,16 +1,16 @@
 import type { FunctionalComponent, VNode } from 'vue'
 import { h } from 'vue'
 import { useData, useRoute } from 'vitepress'
-import type { Header } from '../../shared'
-import type { DefaultTheme } from '../config'
-import { isActive, joinUrl } from '../utils'
+import type { Header } from 'vitepress'
+import type { YouTheme } from '../config'
+import { isActive, joinUrl } from '../utils/'
 
 interface HeaderWithChildren extends Header {
   children?: Header[]
 }
 
 export const SideBarLink: FunctionalComponent<{
-  item: DefaultTheme.SideBarItem
+  item: YouTheme.SideBarItem
   depth?: number
 }> = (props) => {
   const route = useRoute()
@@ -21,7 +21,7 @@ export const SideBarLink: FunctionalComponent<{
   const headers = route.data.headers
   const text = props.item.text
   const link = resolveLink(site.value.base, props.item.link)
-  const children = (props.item as DefaultTheme.SideBarGroup).children
+  const children = (props.item as YouTheme.SideBarGroup).children
   const active = isActive(route, props.item.link)
   const childItems
     = depth < maxDepth
@@ -54,7 +54,7 @@ function resolveLink(base: string, path?: string): string | undefined {
 
 function createChildren(
   active: boolean,
-  children?: DefaultTheme.SideBarItem[],
+  children?: YouTheme.SideBarItem[],
   headers?: Header[],
   depth = 1,
 ): VNode | null {
@@ -73,7 +73,7 @@ function createChildren(
     : null
 }
 
-function resolveHeaders(headers: Header[]): DefaultTheme.SideBarItem[] {
+function resolveHeaders(headers: Header[]): YouTheme.SideBarItem[] {
   return mapHeaders(groupHeaders(headers))
 }
 
@@ -90,7 +90,7 @@ function groupHeaders(headers: Header[]): HeaderWithChildren[] {
   return headers.filter(h => h.level === 2)
 }
 
-function mapHeaders(headers: HeaderWithChildren[]): DefaultTheme.SideBarItem[] {
+function mapHeaders(headers: HeaderWithChildren[]): YouTheme.SideBarItem[] {
   return headers.map(header => ({
     text: header.title,
     link: `#${header.slug}`,

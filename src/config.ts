@@ -1,6 +1,6 @@
 /* eslint-disable no-use-before-define */
 // eslint-disable-next-line @typescript-eslint/no-namespace
-export namespace DefaultTheme {
+export namespace YouTheme {
 
   // navbar --------------------------------------------------------------------
   export interface NavItemBase {
@@ -75,6 +75,15 @@ export namespace DefaultTheme {
   }
 
   export interface Config {
+    /**
+     * logo icon class
+     */
+    iconClass?: string
+    /**
+     * Short Title
+     */
+    shortTitle?: string
+
     logo?: string
     nav?: NavItem[] | false
     sidebar?: SideBarConfig | MultiSideBarConfig

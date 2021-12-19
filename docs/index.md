@@ -23,7 +23,9 @@ features:
 footer:
   license: MIT Licensed
   since: 2020
-  author: YunYouJun
+  author:
+    name: YunYouJun
+    url: https://www.yunyoujun.cn
 ---
 
 <style>
