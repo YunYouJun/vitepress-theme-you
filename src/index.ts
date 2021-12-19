@@ -18,7 +18,4 @@ export const theme: Theme = {
   NotFound,
 }
 
-// export
-export * from './types/config'
-
 export default theme
