@@ -26,7 +26,7 @@ const features = computed<Feature[]>(() => {
           <section
             v-for="(feature, index) in features"
             :key="index"
-            class="feature"
+            class="feature text-center"
           >
             <h2 v-if="feature.title" class="title">
               {{ feature.title }}

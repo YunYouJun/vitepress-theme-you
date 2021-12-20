@@ -14,7 +14,7 @@
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["vite/client"],
+    "types": ["vite/client", "vite-plugin-pwa/client"],
     "paths": {
       "vitepress-theme-you/*": ["src/*"],
       "vitepress-theme-you": ["src/index.ts"],

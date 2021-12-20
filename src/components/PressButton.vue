@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { toRefs } from 'vue'
+import { computed, toRefs } from 'vue'
 import { useNavLink } from '../composables/navLink'
 import type { YouTheme } from '../types/config'
 
@@ -9,6 +9,20 @@ const props = defineProps<{
 
 const propsRefs = toRefs(props)
 const { props: linkProps } = useNavLink(propsRefs.item)
+
+const classes = computed(() => {
+  const defaultClasses = []
+  if (props.item.color) {
+    defaultClasses.push(`bg-${props.item.color}-500`)
+    defaultClasses.push(`hover:bg-${props.item.color}-400`)
+    defaultClasses.push(`border-${props.item.color}-600`)
+    defaultClasses.push(`hover:border-${props.item.color}-500`)
+  }
+  else {
+    defaultClasses.push('brand')
+  }
+  return defaultClasses
+})
 </script>
 
 <template>
@@ -19,8 +33,12 @@ const { props: linkProps } = useNavLink(propsRefs.item)
       text-white
       rounded
     "
+      font="bold"
+      p="x-4 y-2"
       v-bind="linkProps"
+      :class="classes"
     >
+      <div v-if="item.icon" class="text-white mr-1" :class="item.icon" />
       {{ item.text }}
     </a>
   </span>
@@ -32,27 +50,30 @@ const { props: linkProps } = useNavLink(propsRefs.item)
   justify-content: center;
   align-items: center;
 
-  padding: 0 20px;
-  line-height: 44px;
   font-size: 1rem;
-  font-weight: 500;
-  color: var(--c-bg);
-  background-color: var(--c-brand);
-
-  border-bottom: 4px solid var(--c-brand-dark);
 
   transition: background-color 0.1s ease;
+  border-style: solid;
+  border-width: 0 0 4px 0;
 
   &:hover {
     text-decoration: none;
-    color: var(--c-bg);
-    background-color: var(--c-brand-light);
   }
 
   &:active {
     margin-top: 3px;
     border-bottom-width: 1px;
     transform: translateY(0.25rem);
+  }
+
+  &.brand {
+    color: var(--c-bg);
+    background-color: var(--c-brand);
+    border-bottom-color: var(--c-brand-dark);
+
+    &:hover {
+      background-color: var(--c-brand-light);
+    }
   }
 }
 </style>

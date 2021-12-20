@@ -11,9 +11,11 @@ import { useData } from 'vitepress'
 
 const { site } = useData()
 const msgs = [
+  '这里什么都没有……',
   'There\'s nothing here.',
   'How did we get here?',
   'That\'s a Four-Oh-Four.',
+  '这是来自秘境的神秘代码，名曰 404。',
   'Looks like we\'ve got some broken links.',
 ]
 

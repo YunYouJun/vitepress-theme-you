@@ -11,7 +11,7 @@ const showHero = computed(() => {
   return heroImage || heroText || tagline || actions.length
 })
 
-const heroText = computed(() => frontmatter.value.heroText || site.value.title)
+const heroText = computed(() => frontmatter.value.heroText ?? site.value.title)
 const tagline = computed(
   () => frontmatter.value.tagline || site.value.description,
 )
@@ -19,20 +19,28 @@ const tagline = computed(
 
 <template>
   <header v-if="showHero" class="home-hero">
-    <figure v-if="frontmatter.heroImage" class="figure mx-5">
-      <img
-        class="image"
-        :src="withBase(frontmatter.heroImage)"
-        :alt="frontmatter.heroAlt"
-      >
-    </figure>
-
-    <i v-else class="inline-flex w-50 h-50" :class="frontmatter.heroIconClass" />
+    <slot>
+      <figure v-if="frontmatter.heroImage" class="figure mx-5">
+        <img
+          class="image"
+          :src="withBase(frontmatter.heroImage)"
+          :alt="frontmatter.heroAlt"
+        >
+      </figure>
+      <i v-else-if="frontmatter.heroIconClass" class="inline-flex w-50 h-50" :class="frontmatter.heroIconClass" />
+    </slot>
 
     <h1 v-if="heroText" id="main-title" class="title">
       {{ heroText }}
     </h1>
-    <p v-if="tagline" class="tagline">
+    <p
+      v-if="tagline"
+      class="tagline gradient-text
+            from-blue-600
+            to-red-500
+            bg-gradient-to-r"
+      font="light"
+    >
       {{ tagline }}
     </p>
 
@@ -40,6 +48,7 @@ const tagline = computed(
       <PressButton
         v-for="(action, index) in frontmatter.actions"
         :key="index"
+        class="mx-2"
         :item="action"
       />
     </div>
@@ -91,8 +100,7 @@ const tagline = computed(
 }
 
 .tagline {
-  margin-top: 1rem;
-  line-height: 1.3;
+  margin: 1rem 0 0 0;
   font-size: 1.2rem;
   color: var(--c-text-light);
 }

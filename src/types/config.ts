@@ -13,6 +13,8 @@ export namespace YouTheme {
 
   export interface NavItemWithLink extends NavItemBase {
     link: string
+    icon?: string
+    color?: string
   }
 
   export interface NavItemWithChildren extends NavItemBase {

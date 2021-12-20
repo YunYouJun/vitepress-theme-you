@@ -6,8 +6,10 @@ import HomeFooter from './HomeFooter.vue'
 
 <template>
   <main class="home" aria-labelledby="main-title">
-    <HomeHero />
-    <slot name="hero" />
+    <HomeHero>
+      <slot name="hero" />
+    </HomeHero>
+
     <HomeFeatures />
     <div class="home-content">
       <Content />
@@ -25,7 +27,7 @@ import HomeFooter from './HomeFooter.vue'
 
 .home-content {
   max-width: 960px;
-  margin: 0px auto;
+  margin: 3rem auto;
   padding: 0 1.5rem;
 }
 </style>

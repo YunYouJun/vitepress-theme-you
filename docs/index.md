@@ -4,13 +4,12 @@ heroText: VitePress-Theme-You
 heroIconClass: i-ri-layout-3-line
 tagline: 你的下一个 VitePress 文档主题
 
-startLink: /guide/
-
-actionText: GitHub
-actionLink: https://github.com/YunYouJun/advjs
-
-altActionText: Guide
-altActionLink: /guide/
+actions:
+  - text: GitHub
+    link: https://github.com/YunYouJun/advjs
+    color: dark
+  - text: Guide
+    link: /guide/
 
 features:
   - title: ✍️ 优雅
@@ -39,7 +38,7 @@ footer:
 }
 </style>
 
-<div class="text-center font-light text-2xl">
+<div class="text-center font-light text-2xl pt-2">
 
 <div class="text-2xl font-normal gradient-text from-blue-600 to-green-500 bg-gradient-to-r">
 

@@ -1,14 +1,21 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+
 import { useData } from 'vitepress'
 import { useRepo } from '../composables/repo'
 
 const { frontmatter } = useData()
 const repo = useRepo()
+
+// footer is string instead of object
+const footerIsString = computed(() => {
+  return typeof frontmatter.value.footer === 'string'
+})
 </script>
 
 <template>
   <footer v-if="frontmatter.footer" class="footer m-auto mt-10 max-w-960px">
-    <div v-if="typeof frontmatter.footer !== 'string'" class="container text">
+    <div v-if="!footerIsString" class="container text">
       <a
         v-if="frontmatter.footer.license"
         :href="(repo && repo.link) || ''"
@@ -62,7 +69,7 @@ const repo = useRepo()
 }
 
 .text {
-  margin: 0;
+  margin: auto;
   text-align: center;
   line-height: 1.4;
   font-size: 0.9rem;
