@@ -1,9 +1,9 @@
 import { Theme } from "vitepress";
+import "vitepress-theme-you/css";
 import YouTheme from "vitepress-theme-you";
 
 // https://github.com/antfu/unocss
 import 'uno.css'
-
 
 const theme: Theme = {
   ...YouTheme,

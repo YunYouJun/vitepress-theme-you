@@ -8,7 +8,7 @@ const { site, frontmatter } = useData()
 const showHero = computed(() => {
   const { heroImage, heroText, tagline, actions }
     = frontmatter.value
-  return heroImage || heroText || tagline || actions.length
+  return heroImage || heroText || tagline || (actions && actions.length)
 })
 
 const heroText = computed(() => frontmatter.value.heroText ?? site.value.title)

@@ -21,7 +21,8 @@ Config `vite.config.ts`:
 Config `.vitepress/theme/index.ts`:
 
 ```ts
-
+import "vitepress-theme-you/css";
+import YouTheme from "vitepress-theme-you";
 ```
 
 ## Who use it?

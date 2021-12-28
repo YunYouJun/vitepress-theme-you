@@ -55,3 +55,7 @@ const config: UserConfig = {
 
 export default config
 ```
+
+## More info
+
+...
