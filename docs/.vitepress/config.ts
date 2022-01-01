@@ -1,6 +1,9 @@
 import { UserConfig } from "vitepress";
+import baseConfig from 'vitepress-theme-you/config'
 
 const config: UserConfig = {
+  extends: baseConfig,
+  
   title: "You",
 
   themeConfig: {

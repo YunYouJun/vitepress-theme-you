@@ -2,20 +2,21 @@
 import { computed, defineAsyncComponent, ref, watch } from 'vue'
 import { useData, useRoute } from 'vitepress'
 import Debug from 'vitepress/dist/client/app/components/Debug.vue'
-import { getSideBarConfig, isSideBarEmpty } from './support/sideBar'
+import { getSideBarConfig, isSideBarEmpty } from '../support/sideBar'
+
+import { isDev } from '../../shared'
 
 // components
-import NavBar from './components/NavBar.vue'
-import Page from './components/Page.vue'
-import SideBar from './components/SideBar.vue'
-import { isDev } from './shared'
+import NavBar from './NavBar.vue'
+import Page from './Page.vue'
+import SideBar from './SideBar.vue'
 
-const Home = defineAsyncComponent(() => import('./components/Home.vue'))
+const Home = defineAsyncComponent(() => import('./Home.vue'))
 
 const NoopComponent = () => null
 
 const AlgoliaSearchBox = __ALGOLIA__
-  ? defineAsyncComponent(() => import('./components/AlgoliaSearchBox.vue'))
+  ? defineAsyncComponent(() => import('./AlgoliaSearchBox.vue'))
   : NoopComponent
 
 // generic state

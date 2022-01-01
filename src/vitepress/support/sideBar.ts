@@ -1,10 +1,10 @@
 import type { YouTheme } from '../types/config'
-import { ensureStartingSlash, isArray, removeExtention } from '../utils'
+import { ensureStartingSlash, removeExtention } from '../support/utils'
 
 export function isSideBarConfig(
   sidebar: YouTheme.SideBarConfig | YouTheme.MultiSideBarConfig,
 ): sidebar is YouTheme.SideBarConfig {
-  return sidebar === false || sidebar === 'auto' || isArray(sidebar)
+  return sidebar === false || sidebar === 'auto' || Array.isArray(sidebar)
 }
 
 export function isSideBarGroup(
@@ -14,7 +14,7 @@ export function isSideBarGroup(
 }
 
 export function isSideBarEmpty(sidebar?: YouTheme.SideBarConfig): boolean {
-  return isArray(sidebar) ? sidebar.length === 0 : !sidebar
+  return Array.isArray(sidebar) ? sidebar.length === 0 : !sidebar
 }
 
 /**

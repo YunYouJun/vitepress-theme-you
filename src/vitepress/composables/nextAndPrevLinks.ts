@@ -1,6 +1,6 @@
 import { computed } from 'vue'
 import { useData } from 'vitepress'
-import { ensureStartingSlash, isArray, removeExtention } from '../utils'
+import { ensureStartingSlash, removeExtention } from '../support/utils'
 import { getFlatSideBarLinks, getSideBarConfig } from '../support/sideBar'
 
 export function useNextAndPrevLinks() {
@@ -13,7 +13,7 @@ export function useNextAndPrevLinks() {
   const candidates = computed(() => {
     const config = getSideBarConfig(theme.value.sidebar, path.value)
 
-    return isArray(config) ? getFlatSideBarLinks(config) : []
+    return Array.isArray(config) ? getFlatSideBarLinks(config) : []
   })
 
   const index = computed(() => {

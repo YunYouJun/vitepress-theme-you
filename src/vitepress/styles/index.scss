@@ -1,5 +1,14 @@
 @use './effects';
 
+@use './vars.scss';
+@use './vars-dark.scss';
+@use './layout.scss';
+@use './code.css';
+@use './custom-blocks.css';
+@use './sidebar-links.css';
+
+@import '../../core/styles/index.css';
+
 .icon-button {
   display: flex;
   justify-content: center;

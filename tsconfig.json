@@ -16,8 +16,9 @@
     "allowSyntheticDefaultImports": true,
     "types": ["vite/client", "vite-plugin-pwa/client"],
     "paths": {
-      "vitepress-theme-you/*": ["src/*"],
       "vitepress-theme-you": ["src/index.ts"],
+      "vitepress-theme-you/config": ["src/vitepress/config/baseConfig.js"],
+      "vitepress-theme-you/*": ["src/*"],
     }
   },
   "include": ["src/**/*", "docs/.vitepress/**/*", "node_modules/@vueuse/core/index.d.ts"],
