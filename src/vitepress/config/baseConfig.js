@@ -2,16 +2,14 @@
 
 // import type { UserConfig } from 'vitepress'
 
-import { readFileSync } from 'fs'
-import { resolve } from 'path'
+const { readFileSync } = require('fs')
+const { resolve } = require('path')
 
-import { URL } from 'url'
-import { presetAttributify, presetUno } from 'unocss'
-import Unocss from 'unocss/vite'
+const Unocss = require('unocss/vite').default
 
-import presetIcons from '@unocss/preset-icons'
+const presetIcons = require('@unocss/preset-icons').default
 
-const __dirname = new URL('.', import.meta.url).pathname
+const { presetAttributify, presetUno } = require('unocss')
 
 const colors = ['red', 'green', 'blue', 'gray', 'yellow', 'dark']
 const safelist = []
@@ -28,13 +26,14 @@ const deps = ['@vueuse/core']
 /**
  * @type {() => Promise<import('vitepress').UserConfig>}
  */
-export default async() => ({
+module.exports = async() => ({
   vite: {
     ssr: {
       noExternal: deps,
     },
 
     optimizeDeps: {
+      include: ['dayjs'],
       exclude: deps,
     },
 

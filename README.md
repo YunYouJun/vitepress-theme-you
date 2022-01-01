@@ -1,6 +1,7 @@
 # vitepress-theme-you
 
 > 🎮 你的下一个文档主题（开发中）
+> Can not work well yet, do not use it.
 
 [![npm](https://img.shields.io/npm/v/vitepress-theme-you)](https://npmjs.com/package/vitepress-theme-you)
 
@@ -21,7 +22,6 @@ Config `vite.config.ts`:
 Config `.vitepress/theme/index.ts`:
 
 ```ts
-import "vitepress-theme-you/css";
 import YouTheme from "vitepress-theme-you";
 ```
 
@@ -30,3 +30,4 @@ import YouTheme from "vitepress-theme-you";
 - [advjs](https://github.com/YunYouJun/advjs/)
 - [augma](https://github.com/YunYouJun/augma/)
 - [vtuber](https://github.com/YunYouJun/vtuber)
+- [hexo-theme-yun](https://github.com/YunYouJun/hexo-theme-yun)
