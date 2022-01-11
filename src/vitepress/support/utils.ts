@@ -1,3 +1,4 @@
+import type { Route } from 'vitepress'
 import { withBase } from 'vitepress'
 import { ref } from 'vue'
 
@@ -34,28 +35,14 @@ if (inBrowser) {
   })
 }
 
-export function isActive(
-  currentPath: string,
-  matchPath?: string,
-  asRegex = false,
-): boolean {
-  if (matchPath === undefined)
+export function isActive(route: Route, path?: string): boolean {
+  if (path === undefined)
     return false
 
-  currentPath = normalize(`/${currentPath}`)
-  if (asRegex) {
-    return new RegExp(matchPath).test(currentPath)
-  }
-  else {
-    if (normalize(matchPath) !== currentPath)
-      return false
+  const routePath = normalize(`/${route.data.relativePath}`)
+  const pagePath = normalize(path)
 
-    const hashMatch = matchPath.match(hashRE)
-    if (hashMatch)
-      return hashRef.value === hashMatch[0]
-
-    return true
-  }
+  return routePath === pagePath
 }
 
 export function normalize(path: string): string {

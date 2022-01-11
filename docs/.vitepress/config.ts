@@ -1,4 +1,5 @@
 import { UserConfig } from "vitepress";
+// @ts-ignore
 import baseConfig from 'vitepress-theme-you/config'
 
 const config: UserConfig = {
@@ -18,6 +19,28 @@ const config: UserConfig = {
     editLinks: true,
     editLinkText: "帮助改善此页面",
     lastUpdated: "上次更新",
+
+    sidebar: {
+      '/': [
+        {
+          text: "指南",
+          children: [
+            {
+              text: '介绍',
+              link: '/guide/',
+            },
+            {
+              text: '使用',
+              link: '/guide/usage',
+            }
+          ]
+        },
+        {
+          text: "测试",
+          link: '/test/',
+        }
+      ]
+    },
 
     nav: [
       {
