@@ -1,12 +1,13 @@
 {
   "name": "vitepress-theme-you",
-  "version": "0.0.29",
+  "version": "0.0.31",
   "description": "🎮 你的新文档主题",
   "main": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts",
     "./config": "./src/vitepress/config/baseConfig.js",
-    "./types": "./src/types/index.ts"
+    "./types": "./src/types/index.ts",
+    "./src/*": "./src/*"
   },
   "files": [
     "src",
@@ -38,7 +39,7 @@
   },
   "homepage": "https://github.com/YunYouJun/vitepress-theme-you#readme",
   "devDependencies": {
-    "@antfu/eslint-config": "~0.15.0",
+    "@antfu/eslint-config": "~0.16.0",
     "@iconify-json/ri": "^1.0.2",
     "@types/node": "^17.0.8",
     "eslint": "^8.6.0",
@@ -47,12 +48,12 @@
     "vue": "^3.2.26"
   },
   "dependencies": {
-    "@unocss/preset-icons": "^0.22.0",
+    "@unocss/preset-icons": "^0.22.2",
     "@vueuse/core": "^7.5.3",
     "dayjs": "^1.10.7",
     "prism-theme-vars": "^0.2.2",
-    "sass": "^1.47.0",
-    "unocss": "^0.22.0",
-    "vitepress-theme-you": "workspace:^0.0.28"
+    "sass": "^1.48.0",
+    "unocss": "^0.22.2",
+    "vitepress-theme-you": "workspace:^"
   }
 }

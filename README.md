@@ -27,6 +27,7 @@ export default {
 Config `.vitepress/theme/index.ts`:
 
 ```ts
+import type { Theme } from 'vitepress';
 import { VPTheme } from "vitepress-theme-you";
 
 import "uno.css";
