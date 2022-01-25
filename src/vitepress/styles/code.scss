@@ -12,20 +12,20 @@
 
 html:not(.dark) {
   --prism-foreground: #393a34;
-  --prism-background: #fafafa;
-  --prism-inline-background: #f5f5f5;
+  --prism-background: #f5f2f0;
+  --prism-inline-background: #f5f2f0;
   --prism-comment: #a0ada0;
-  --prism-string: #b56959;
+  --prism-string: #690;
   --prism-literal: #2f8a89;
   --prism-number: #296aa3;
-  --prism-keyword: #1c6b48;
-  --prism-function: #6c7834;
+  --prism-keyword: #00509b;
+  --prism-function: purple;
   --prism-boolean: #296aa3;
   --prism-constant: #a65e2b;
   --prism-deleted: #a14f55;
   --prism-class: #2993a3;
   --prism-builtin: #ab5959;
-  --prism-property: #b58451;
+  --prism-property: #8250df;
   --prism-namespace: #b05a78;
   --prism-punctuation: #8e8f8b;
   --prism-decorator: #bd8f8f;
@@ -35,22 +35,22 @@ html:not(.dark) {
 
 html.dark {
   --prism-scheme: dark;
-  --prism-foreground: #d4cfbf;
+  --prism-foreground: #A6ACCD;
   --prism-background: #181818;
   --prism-comment: #758575;
-  --prism-string: #d48372;
+  --prism-string: #C3E88D;
   --prism-literal: #429988;
-  --prism-keyword: #4d9375;
+  --prism-keyword: #89DDFF;
   --prism-boolean: #6394bf;
   --prism-number: #6394bf;
   --prism-variable: #c2b36e;
-  --prism-function: #a1b567;
+  --prism-function: #82AAFF;
   --prism-deleted: #bc6066;
   --prism-class: #54b1bf;
-  --prism-builtin: #e0a569;
-  --prism-property: #dd8e6e;
+  --prism-builtin: #F07178;
+  --prism-property: #C792EA;
   --prism-namespace: #db889a;
-  --prism-punctuation: #858585;
+  --prism-punctuation: #89DDFF;
   --prism-decorator: #bd8f8f;
   --prism-regex: #ab5e3f;
   --prism-json-property: #6b8b9e;
@@ -67,14 +67,18 @@ html.dark {
 }
 
 /* Overrides */
+code {
+  font-size: var(--prism-font-size);
+}
 
 pre, code {
   @apply font-mono;
+  font-family: var(--font-family-mono);
 }
 
 :not(pre) > code {
   background: var(--prism-inline-background);
-  padding: 1px 6px;
+  padding: 0.2rem 0.5rem;
   border-radius: 3px;
   color: var(--c-text);
 }
@@ -85,6 +89,7 @@ a > code {
 
 div[class*='language-'] {
   position: relative;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 div[class*='language-'] pre {
