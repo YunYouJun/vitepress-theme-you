@@ -27,18 +27,18 @@ export default {
 Config `.vitepress/theme/index.ts`:
 
 ```ts
-import type { Theme } from 'vitepress';
-import { VPTheme } from "vitepress-theme-you";
+import type { Theme } from 'vitepress'
+import { VPTheme } from 'vitepress-theme-you'
 
-import "uno.css";
+import 'uno.css'
 
 const theme: Theme = Object.assign({}, VPTheme, {
   enhanceApp: ({ app }) => {
     // ...
   },
-});
+})
 
-export default theme;
+export default theme
 ```
 
 ## Who use it?
@@ -48,3 +48,11 @@ export default theme;
 - [el-bot](https://github.com/YunYouJun/el-bot)
 - [vtuber](https://github.com/YunYouJun/vtuber)
 - [hexo-theme-yun](https://github.com/YunYouJun/hexo-theme-yun)
+
+## [Sponsors](https://sponsors.yunyoujun.cn)
+
+<p align="center">
+  <a href="https://cdn.jsdelivr.net/gh/YunYouJun/sponsors/public/sponsors.svg">
+    <img src='https://cdn.jsdelivr.net/gh/YunYouJun/sponsors/public/sponsors.svg'/>
+  </a>
+</p>

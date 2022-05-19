@@ -6,6 +6,10 @@ declare module '*.vue' {
   export default comp
 }
 
+declare module 'vitepress-theme-you/config' {
+  export default any
+}
+
 // this module's typing is broken
 declare module '@docsearch/js' {
   function docsearch<T = any>(props: T): void

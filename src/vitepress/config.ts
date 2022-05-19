@@ -101,9 +101,7 @@ export type NavItemWithChildren = MenuItemChildWithChildren & {
 
 export type SidebarConfig = SidebarGroup[] | MultiSidebarConfig
 
-export interface MultiSidebarConfig {
-  [path: string]: SidebarGroup[]
-}
+export type MultiSidebarConfig = Record<string, SidebarGroup[]>
 
 export interface SidebarGroup {
   text: string

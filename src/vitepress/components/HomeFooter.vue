@@ -24,7 +24,7 @@ const footerIsString = computed(() => {
       <span
         class="mx-2 inline-block"
       >Copyright ©
-        {{ frontmatter.footer.since + ' - ' + new Date().getFullYear() }}
+        {{ `${frontmatter.footer.since} - ${new Date().getFullYear()}` }}
       </span>
       <template v-if="frontmatter.footer.author">
         <template v-if="frontmatter.footer.author.url">

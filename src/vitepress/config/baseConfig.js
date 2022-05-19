@@ -26,7 +26,7 @@ const deps = ['@vueuse/core']
 /**
  * @type {() => Promise<import('vitepress').UserConfig>}
  */
-module.exports = async() => ({
+module.exports = async () => ({
   vite: {
     ssr: {
       noExternal: deps,

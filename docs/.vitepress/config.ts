@@ -1,29 +1,28 @@
-import { UserConfig } from "vitepress";
-// @ts-ignore
+import type { UserConfig } from 'vitepress'
 import baseConfig from 'vitepress-theme-you/config'
 
 const config: UserConfig = {
   extends: baseConfig,
-  
-  title: "You",
+
+  title: 'You',
 
   themeConfig: {
-    repo: "YunYouJun/advjs",
-    logo: "/favicon.svg",
-    iconClass: "i-ri-layout-3-line",
+    repo: 'YunYouJun/advjs',
+    logo: '/favicon.svg',
+    iconClass: 'i-ri-layout-3-line',
 
-    docsDir: "docs",
-    docsBranch: "main",
-    docsRepo: "YunYouJun/advjs",
+    docsDir: 'docs',
+    docsBranch: 'main',
+    docsRepo: 'YunYouJun/advjs',
 
     editLinks: true,
-    editLinkText: "帮助改善此页面",
-    lastUpdated: "上次更新",
+    editLinkText: '帮助改善此页面',
+    lastUpdated: '上次更新',
 
     sidebar: {
       '/': [
         {
-          text: "指南",
+          text: '指南',
           children: [
             {
               text: '介绍',
@@ -32,27 +31,27 @@ const config: UserConfig = {
             {
               text: '使用',
               link: '/guide/usage',
-            }
-          ]
+            },
+          ],
         },
         {
-          text: "测试",
+          text: '测试',
           link: '/test/',
-        }
-      ]
+        },
+      ],
     },
 
     nav: [
       {
-        text: "指南",
-        link: "/guide/",
+        text: '指南',
+        link: '/guide/',
       },
       {
-        text: "测试",
-        link: "/test/",
+        text: '测试',
+        link: '/test/',
       },
     ],
   },
-};
+}
 
-export default config;
+export default config

@@ -6,9 +6,9 @@ import ToggleSideBarButton from './ToggleSideBarButton.vue'
 
 import DarkModeSwitch from './navbar/DarkModeSwitch.vue'
 
-const repo = useRepo()
-
 defineEmits(['toggle'])
+
+const repo = useRepo()
 </script>
 
 <template>

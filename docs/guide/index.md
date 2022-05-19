@@ -16,8 +16,8 @@ pnpm add vitepress-theme-you
 
 ```ts
 // docs/.vitepress/theme/index.ts
-import { Theme } from "vitepress";
-import { VPTheme } from "vitepress-theme-you";
+import type { Theme } from 'vitepress'
+import { VPTheme } from 'vitepress-theme-you'
 
 // https://github.com/antfu/unocss
 import 'uno.css'
@@ -25,9 +25,9 @@ import 'uno.css'
 const theme: Theme = {
   ...VPTheme,
   enhanceApp: ({ app }) => {},
-};
+}
 
-export default theme;
+export default theme
 ```
 
 配置 `.vitepress/config.ts`。
@@ -35,13 +35,12 @@ export default theme;
 > 因为使用 unocss 来动态生成 CSS 图标。
 
 ```ts
-import { UserConfig } from "vitepress";
-// @ts-ignore
+import type { UserConfig } from 'vitepress'
 import baseConfig from 'vitepress-theme-you/config'
 
 const config: UserConfig = {
   extends: baseConfig,
-  title: "You",
+  title: 'You',
   themeConfig: {
     // ...
   }
