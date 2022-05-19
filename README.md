@@ -5,6 +5,8 @@
 
 [![npm](https://img.shields.io/npm/v/vitepress-theme-you)](https://npmjs.com/package/vitepress-theme-you)
 
+- Preview: [you.yunyoujun.cn](https://you.yunyoujun.cn)
+
 ## Usage
 
 ```bash

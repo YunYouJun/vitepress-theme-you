@@ -1,6 +1,7 @@
 {
   "name": "vitepress-theme-you",
   "version": "0.0.33",
+  "packageManager": "pnpm@7.1.2",
   "description": "🎮 你的新文档主题",
   "keywords": [
     "vitepress",
