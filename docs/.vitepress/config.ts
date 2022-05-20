@@ -7,13 +7,13 @@ const config: UserConfig = {
   title: 'You',
 
   themeConfig: {
-    repo: 'YunYouJun/advjs',
+    repo: 'YunYouJun/vitepress-theme-you',
     logo: '/favicon.svg',
     iconClass: 'i-ri-layout-3-line',
 
     docsDir: 'docs',
     docsBranch: 'main',
-    docsRepo: 'YunYouJun/advjs',
+    docsRepo: 'YunYouJun/vitepress-theme-you',
 
     editLinks: true,
     editLinkText: '帮助改善此页面',
