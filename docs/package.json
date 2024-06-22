@@ -1,7 +1,7 @@
 {
   "name": "vitepress-theme-you-docs",
   "devDependencies": {
-    "vite-plugin-pwa": "^0.12.0",
+    "vite-plugin-pwa": "^0.20.0",
     "vitepress-theme-you": "workspace:^"
   }
 }

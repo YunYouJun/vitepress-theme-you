@@ -1,5 +1,7 @@
 import type { UserConfig } from 'vitepress'
-import baseConfig from 'vitepress-theme-you/config'
+// import baseConfig from 'vitepress-theme-you/config'
+
+import { baseConfig } from '../../src/config'
 
 const config: UserConfig = {
   extends: baseConfig,

@@ -1,33 +1,38 @@
 {
   "name": "vitepress-theme-you",
-  "version": "0.0.33",
-  "packageManager": "pnpm@7.1.2",
+  "type": "module",
+  "version": "0.1.0-alpha.1",
+  "packageManager": "pnpm@9.3.0",
   "description": "🎮 你的新文档主题",
-  "keywords": [
-    "vitepress",
-    "theme"
-  ],
-  "license": "MIT",
   "author": {
     "name": "YunYouJun",
     "email": "me@yunyoujun.cn",
     "url": "https://www.yunyoujun.cn"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/YunYouJun/vitepress-theme-you#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YunYouJun/vitepress-theme-you.git"
   },
-  "main": "./src/index.ts",
+  "bugs": {
+    "url": "https://github.com/YunYouJun/vitepress-theme-you/issues"
+  },
+  "keywords": [
+    "vitepress",
+    "theme"
+  ],
   "exports": {
     ".": "./src/index.ts",
     "./config": "./src/vitepress/config/baseConfig.js",
     "./types": "./src/types/index.ts",
     "./src/*": "./src/*"
   },
+  "main": "./src/index.ts",
   "files": [
     "src",
-    "types",
-    "tsconfig.json"
+    "tsconfig.json",
+    "types"
   ],
   "scripts": {
     "build": "pnpm docs:build",
@@ -38,26 +43,24 @@
     "lint": "eslint .",
     "type": "tsc --noEmit"
   },
-  "bugs": {
-    "url": "https://github.com/YunYouJun/vitepress-theme-you/issues"
-  },
-  "homepage": "https://github.com/YunYouJun/vitepress-theme-you#readme",
   "dependencies": {
-    "@unocss/preset-icons": "^0.33.5",
-    "@vueuse/core": "^8.5.0",
-    "dayjs": "^1.11.2",
-    "prism-theme-vars": "^0.2.3",
-    "sass": "^1.51.0",
-    "unocss": "^0.33.5"
+    "@unocss/preset-icons": "^0.61.0",
+    "@vueuse/core": "^10.11.0",
+    "dayjs": "^1.11.11",
+    "prism-theme-vars": "^0.2.5",
+    "sass": "^1.77.5"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "~0.23.1",
-    "@iconify-json/ri": "^1.1.1",
-    "@types/node": "^17.0.35",
-    "eslint": "^8.15.0",
-    "typescript": "^4.6.4",
-    "vite": "^2.9.9",
-    "vitepress": "^0.22.4",
-    "vue": "^3.2.34"
+    "@antfu/eslint-config": "^2.21.1",
+    "@iconify-json/ri": "^1.1.21",
+    "@types/node": "^20.14.2",
+    "@unocss/eslint-plugin": "^0.61.0",
+    "eslint": "^9.5.0",
+    "eslint-plugin-format": "^0.1.2",
+    "typescript": "^5.4.5",
+    "unocss": "^0.61.0",
+    "vite": "^5.3.1",
+    "vitepress": "^1.2.3",
+    "vue": "^3.4.29"
   }
 }
